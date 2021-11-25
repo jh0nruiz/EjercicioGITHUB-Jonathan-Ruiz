@@ -45,5 +45,14 @@ console.log(sacaparoimpar(x));
 
 //Ejercicio 4
 
-
-//Ejercicio 5
+function palindromo(str) {
+    //validacion de expresiones regulares
+    var re = /[\W_]/g;
+    
+    //validacion de mayusculas, y remplazo
+    var inicio = str.toLowerCase().replace(re, '');
+    //valdiacion de vacios, validacion de alreves y la union
+    var alreves = inicio.split('').reverse().join('');
+    return alreves === inicio;
+    }
+    console.log(palindromo("A man, a plan, a canal. Panama"))
